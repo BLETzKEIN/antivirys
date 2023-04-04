@@ -30,5 +30,5 @@ while True:
         if u.type == nomertimer:
             a.fill([0, 0, 0])
             a.blit(filli, [0, 0])
-            
+
     pygame.display.flip()
