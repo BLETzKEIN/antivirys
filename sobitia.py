@@ -26,6 +26,16 @@ while True:
             else:
                 keyy = f.render("клавиша " + str(u.key), True, [0, 200, 200])
                 a.blit(keyy, [random.randint(50, 1300), random.randint(50, 650)])
+        if u.type == pygame.MOUSEBUTTONDOWN:
+            if u.button == pygame.BUTTON_LEFT:
+                mish = f.render("мышь "+str(u.pos),True,[126,245,72])
+                a.blit(mish,u.pos)
+            elif u.button == pygame.BUTTON_RIGHT:
+                mish = f.render("мышь " + str(u.pos), True, [235, 150, 89])
+                a.blit(mish, u.pos)
+            else:
+                mish = f.render("мышь " + str(u.pos), True, [0, 255, 210])
+                a.blit(mish, u.pos)
 
         if u.type == nomertimer:
             a.fill([0, 0, 0])
